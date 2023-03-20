@@ -1,0 +1,30 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+<mat-toolbar class="nav" color="primary">
+  <mat-toolbar-row>
+  <div class="logo1">
+    <p class="logo"> My First App  </p>
+
+  </div>    
+  
+  <ul>
+    <li class="burger" (click)="toggleMenu()">
+      <i class="material-icons">{{ isMenuOpen ? "close" : "menu" }}</i>
+    </li>
+    <li class="menu" [class.is-open]="isMenuOpen">      
+      <button class="btn" mat-button>About</button>
+      <button class="btn" mat-button>Contact</button>
+      <button class="icn" mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+    </li>
+</ul>
+
+
+
+
+   </mat-toolbar-row>
+
+   <app-nav></app-nav>
+

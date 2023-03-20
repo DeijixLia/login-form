@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="nav.component.css">
+
+<mat-card class="form">
+    <mat-card-header>
+      <mat-card-title class="login">Login</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+        <form class="example-form">
+          <table class="example-full-width" cellspacing="0">
+            <tr>
+              <td>
+                <mat-form-field appearance="fill">
+                    <mat-label>Username *</mat-label>
+                    <input matInput>
+                  </mat-form-field>
+              </td>
+            </tr>
+            <tr>
+                <td>
+                  <mat-form-field appearance="fill">
+                      <mat-label>Password *</mat-label>
+                      <input matInput>
+                    </mat-form-field>
+                </td>
+              </tr>
+          </table>
+        </form>
+        <mat-spinner *ngIf="showSpinner"></mat-spinner>
+        <button mat-raised-button color="primary" (click)="loadData()">Login</button>
+        
+    </mat-card-content>

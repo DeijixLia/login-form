@@ -1,0 +1,93 @@
+.nav{
+    background-color: #643cb3;
+
+}
+
+.logo1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    float: left;
+}
+
+.logo {
+    font-size: 25px;
+}
+
+
+
+
+$menuHeight: 60px;
+$menuBreakpoint: 768px;
+
+.burger {
+    padding: 0 10px;
+    
+    display: none;
+    cursor: pointer;
+
+    i {
+      color: white;
+      line-height: $menuHeight;
+    }
+
+    @media (max-width: $menuBreakpoint) {
+      display: block;
+    }
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $menuBreakpoint) {
+      display: none;
+
+      &.is-open {
+        display: block;
+        position: absolute;
+        top: #{$menuHeight + 2};
+        background: #fff;
+        width: 100%;
+
+        .menu-item {
+          border-bottom: 1px solid #cccccc;
+        }
+      }
+    }
+
+    .btn {
+      padding: 0 10px;
+      height: $menuHeight;
+      line-height: $menuHeight;
+      text-decoration: none;
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: white;
+      background-color: #643cb3;
+    }
+  }
+
+  @media (max-width: $menuBreakpoint) {
+  .btn{
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-right: solid 8px white;
+    border-left: solid 8px white;
+    border-radius: 0;
+
+  }
+  .menu{
+    float: left;
+    display: absolute;
+    left: 0;
+
+  }
+
+}
+
+
